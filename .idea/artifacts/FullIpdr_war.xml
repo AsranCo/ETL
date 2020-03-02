@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="FullIpdr:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>FullIpdr</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Voucher-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="FullIpdr:war exploded" />
+    </root>
+  </artifact>
+</component>
