@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FullIpdr.iml" filepath="$PROJECT_DIR$/FullIpdr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ETL.iml" filepath="$PROJECT_DIR$/ETL.iml" />
     </modules>
   </component>
 </project>

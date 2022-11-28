@@ -4,16 +4,20 @@
     <option name="serverConfigurations">
       <list>
         <ServerConfiguration>
+          <option name="authenticationDatabase" value="admin" />
+          <option name="authenticationMechanism" value="SCRAM-SHA-1" />
           <option name="label" value="Full_TBL" />
+          <option name="password" value="a" />
           <option name="serverUrls">
             <list>
-              <option value="mongos:27018" />
+              <option value="mongos:27019" />
             </list>
           </option>
           <option name="sshTunnelingConfiguration">
             <SshTunnelingConfiguration />
           </option>
-          <option name="userDatabase" value="TEST" />
+          <option name="userDatabase" value="FANOOS" />
+          <option name="username" value="root" />
         </ServerConfiguration>
       </list>
     </option>
