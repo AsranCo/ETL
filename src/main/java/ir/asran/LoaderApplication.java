@@ -1,6 +1,6 @@
 package ir.asran;
 
-import ir.asran.records.parser.Record;
+import ir.asran.records.parser.ParsedItem;
 import ir.asran.multiThread.ProducerConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ public class LoaderApplication implements CommandLineRunner {
     private static final Logger logger = LoggerFactory.getLogger(LoaderApplication.class);
 
     @Autowired
-    public Record readFile;
+    public ParsedItem readFile;
 
     public final static String t_n="table_name";
 
@@ -30,7 +30,7 @@ public class LoaderApplication implements CommandLineRunner {
         int nThreads = Integer.parseInt(String.valueOf(6));
         int queueSize = Integer.parseInt(String.valueOf(1000000));
 
-        String path = "/home/pathfile/";
+        String path = "sample/";
 
         //run loader
         ProducerConsumer.main(nThreads, queueSize, path, readFile);

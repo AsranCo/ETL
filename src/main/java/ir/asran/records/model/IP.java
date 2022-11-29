@@ -1,31 +1,21 @@
 package ir.asran.records.model;
 
 
-import ir.asran.LoaderApplication;
+import
+        ir.asran.LoaderApplication;
 
-import javax.persistence.*;
 import java.util.Date;
 
-@Entity
-@Table(name = IP.table_name)
 public class IP {
 
-    public  static final String table_name= LoaderApplication.t_n;
+    public static final String table_name = LoaderApplication.t_n;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seqGen")
-    @SequenceGenerator(name = "seqGen", sequenceName = "seq", initialValue = 1)
-    private long id;
+
     private Date timestamp;
     private String sr_ip;
     private int sr_port;
     private String de_ip;
     private int de_port;
-
-
-
-
-
 
 
     public Date getTimestamp() {
@@ -73,7 +63,6 @@ public class IP {
     @Override
     public String toString() {
         return "IP{" +
-                "id=" + id +
                 ", timestamp=" + timestamp +
                 ", sr_ip='" + sr_ip + '\'' +
                 ", sr_port=" + sr_port +

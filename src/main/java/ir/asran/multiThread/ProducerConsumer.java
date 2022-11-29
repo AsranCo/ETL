@@ -1,6 +1,6 @@
 package ir.asran.multiThread;
 
-import ir.asran.records.parser.Record;
+import ir.asran.records.parser.ParsedItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,7 +12,8 @@ import java.util.concurrent.Future;
 public class ProducerConsumer {
     private static final Logger logger = LoggerFactory.getLogger(ProducerConsumer.class);
 
-    public static void main(int nThreads, int queueSize, String path, Record insertObject) {
+    public static void main(int nThreads, int queueSize, String path, ParsedItem insertObject) {
+//        while (!Thread.currentThread().isInterrupted()) {
 
         try {
 
@@ -24,7 +25,7 @@ public class ProducerConsumer {
 
             //Consumers
             for (int i = 0; i < nThreads; ++i) {
-                threadPool.execute(new Consumer("Consumer" + String.valueOf(i + 1), broker ,insertObject));
+                threadPool.execute(new Consumer("Consumer" + String.valueOf(i + 1), broker, insertObject));
             }
 
 
@@ -41,3 +42,4 @@ public class ProducerConsumer {
         }
     }
 }
+//}

@@ -86,6 +86,6 @@ public class Producer implements Runnable {
             logger.error("Error to read file ");
         }
         this.broker.continueProducing = Boolean.FALSE;
-        logger.info("Producer finished its job; terminating.");
+//        logger.info("Producer finished its job; terminating.");
     }
 }

@@ -1,6 +1,6 @@
 package ir.asran.multiThread;
 
-import ir.asran.records.parser.Record;
+import ir.asran.records.parser.ParsedItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +14,13 @@ public class Consumer implements Runnable {
     private static final Logger logger = LoggerFactory.getLogger(Consumer.class);
 
     @Autowired
-    public Record insertObject;
+    public ParsedItem insertObject;
 
 
     private String name;
     private Broker broker;
 
-    public Consumer(String name, Broker broker, Record insertObject) {
+    public Consumer(String name, Broker broker, ParsedItem insertObject) {
         this.name = name;
         this.broker = broker;
         this.insertObject = insertObject;

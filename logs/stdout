@@ -1,0 +1,27 @@
+2022-11-29 11:19:35 [main] INFO  - Starting LoaderApplication using Java 11.0.2 on Manavi with PID 75908 (/home/ali/IdeaProjects/ETL/target/classes started by ali in /home/ali/IdeaProjects/ETL)
+2022-11-29 11:19:35 [main] DEBUG - Running with Spring Boot v2.7.6, Spring v5.3.24
+2022-11-29 11:19:35 [main] INFO  - No active profile set, falling back to 1 default profile: "default"
+2022-11-29 11:19:35 [main] INFO  - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-11-29 11:19:35 [main] INFO  - Finished Spring Data repository scanning in 56 ms. Found 1 JDBC repository interfaces.
+2022-11-29 11:19:35 [main] INFO  - Autowired annotation is not supported on static fields: private static final org.slf4j.Logger ir.asran.records.parser.ParsedItem.logger
+2022-11-29 11:19:36 [main] INFO  - HikariPool-1 - Starting...
+2022-11-29 11:19:36 [main] INFO  - HikariPool-1 - Start completed.
+2022-11-29 11:19:36 [main] INFO  - Started LoaderApplication in 1.968 seconds (JVM running for 2.565)
+2022-11-29 11:20:48 [main] INFO  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-29 11:20:48 [main] ERROR - Application run failed
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.concurrent.ArrayBlockingQueue.<init>(ArrayBlockingQueue.java:270)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.<init>(ArrayBlockingQueue.java:254)
+	at ir.asran.multiThread.Broker.<init>(Broker.java:18)
+	at ir.asran.multiThread.ProducerConsumer.main(ProducerConsumer.java:21)
+	at ir.asran.LoaderApplication.run(LoaderApplication.java:36)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:768)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at ir.asran.LoaderApplication.main(LoaderApplication.java:22)
+2022-11-29 11:20:48 [main] INFO  - HikariPool-1 - Shutdown initiated...
+2022-11-29 11:20:48 [main] INFO  - HikariPool-1 - Shutdown completed.
