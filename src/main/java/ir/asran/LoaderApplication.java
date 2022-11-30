@@ -24,8 +24,6 @@ public class LoaderApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
-
         //read props
         int nThreads = Integer.parseInt(String.valueOf(6));
         int queueSize = Integer.parseInt(String.valueOf(1000000));
@@ -35,5 +33,4 @@ public class LoaderApplication implements CommandLineRunner {
         //run loader
         ProducerConsumer.main(nThreads, queueSize, path, readFile);
     }
-
 }

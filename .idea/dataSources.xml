@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="ETL/Hibernate" uuid="46fa3f78-c9ef-4e28-a509-4c0b9f88d530">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="testdb" uuid="09f52e0a-311f-47ee-9f40-b4f4d0d9f615">
+      <driver-ref>h2.unified</driver-ref>
       <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>Hibernate</remarks>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:user.db</jdbc-url>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:$PROJECT_DIR$/testdb</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

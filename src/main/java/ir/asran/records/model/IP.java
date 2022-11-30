@@ -1,15 +1,17 @@
 package ir.asran.records.model;
 
 
-import
-        ir.asran.LoaderApplication;
+import org.hibernate.annotations.IndexColumn;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
 public class IP {
 
-    public static final String table_name = LoaderApplication.t_n;
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected Integer id;
 
     private Date timestamp;
     private String sr_ip;
@@ -59,6 +61,13 @@ public class IP {
         this.de_port = de_port;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     @Override
     public String toString() {
